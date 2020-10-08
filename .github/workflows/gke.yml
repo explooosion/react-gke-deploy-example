@@ -21,7 +21,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-  GKE_CLUSTER: cluster-1    # TODO: update to cluster name
+  GKE_CLUSTER: my-app    # TODO: update to cluster name
   GKE_ZONE: asia-east2-a   # TODO: update to cluster zone
   DEPLOYMENT_NAME: gke-react-app # TODO: update to deployment name
   IMAGE: create-react-app
