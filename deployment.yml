@@ -12,15 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-apiVersion: apps/v1
+apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: nginx-1
+  name: gke-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-1
+      app: gke-test
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -29,13 +29,13 @@ spec:
   template:
     metadata:
       labels:
-        app: nginx-1
+        app: gke-test
     spec:
       containers:
-      - name: nginx-1
+      - name: gke-test
         image: gcr.io/PROJECT_ID/IMAGE:TAG
         ports:
-        - containerPort: 80
+        - containerPort: 5000
         resources:
           requests:
             cpu: 100m
