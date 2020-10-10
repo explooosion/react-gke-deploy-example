@@ -15,7 +15,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: gke-react-app
+  name: gke-test
 spec:
   replicas: 1
   strategy:
@@ -26,10 +26,10 @@ spec:
   template:
     metadata:
       labels:
-        app: gke-react-app
+        app: gke-test
     spec:
       containers:
-      - name: gke-react-app
+      - name: gke-test
         image: gcr.io/PROJECT_ID/IMAGE:TAG
         ports:
         - containerPort: 80
